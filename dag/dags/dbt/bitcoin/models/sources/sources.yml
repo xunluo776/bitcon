@@ -1,0 +1,6 @@
+sources:
+  - name: bronze
+    database: BITCOIN
+    schema: BRONZE
+    tables:
+      - name: BRONZE_TRANSACTIONS

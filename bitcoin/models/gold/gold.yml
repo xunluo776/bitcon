@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: gold
+    description: Daily aggregated Bitcoin network metrics derived from silver transactions.
+
+    columns:
+      - name: block_date
+        description: Transaction block date
+        tests:
+          - not_null
+          - unique
+
+      - name: tx_count
+        description: Number of transactions per day
+        tests:
+          - not_null
+
+      - name: total_fee_btc
+        description: Total transaction fees in BTC per day
+
+      - name: avg_fee_per_vbyte
+        description: Average fee per virtual byte per day

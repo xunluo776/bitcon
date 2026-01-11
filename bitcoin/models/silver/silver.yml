@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: silver
+    description: silver transactions
+
+    columns:
+      - name: TX_HASH
+        description: unique id for a transaction
+        tests:
+          - unique
+          - not_null
+
+      - name: ingestion_timestamp
+        description: Timestamp when the record was ingested into the system
+        tests:
+          - not_null
